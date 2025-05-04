@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;  
+  background-color: #0f224a;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 1px;
+  font-size: 12px; 
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav {
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  background-color: #0f224a;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.25rem;
+}
+a:hover {
+  color: #ffde00;
+  border: 1px solid #fff;
+}
+
+h1 {
+  font-size: 2.8rem; /* было 2.2rem */
+  line-height: 1.5;
+  text-align: center;
+  color: #0f224a;
+}
+
+
+.main {
+  flex: 1;
+  border-radius: 1rem;
+  background-color: white; 
+  margin: 40px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  border: 1px solid transparent;
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #e5454b; 
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s, color 0.25s;
+  font-family: 'Press Start 2P', cursive;
+  word-wrap: break-word;
+  text-align: center;
+}
+button:hover {
+  color: #e5454b;
+  border: 1px solid #e5454b;
+  background: #fff;
+}
+
+#name {
+  color: #ffde00;
+  font-size: 1.5rem;
+}
+
+#power {
+  color: #b3a125;
+  font-size: 1.2rem;
+}
+
+.collection {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  justify-items: center;
+  width: 100%;
+  align-content: start;
+}
+
+.myPokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #0f224a;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 220px; /* было 180px */
+  padding: 16px;
+  width: 100%;
+  font-size: 1rem;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 1.5;
+  min-height: 260px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.colBut {
+  flex: 1;
+  font-size: 0.8rem;
+  padding: 10px;
+  background-color: #0f224a;
+  color: white;
+  border: 1px solid #0f224a;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Press Start 2P', cursive;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 1.5;
+}
+.colBut:hover {
+  background-color: white;
+  border: 1px solid #0f224a;
+  color: #0f224a;
+}
+
+.release {
+  align-self: stretch;
+}
+
+.moving-button {
+  z-index: 1000;
+  font-size: 1rem;
+}
+
+.pokeball-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 2px dashed #ffde00;
+  border-radius: 12px;
+  background-color: #fffef0;
+  box-shadow: 0 0 10px rgba(255, 222, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+  font-size: 1.2rem;
+}
+
+.pokeball-display img {
+  margin: 0.7rem;
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.pokeball-display img:hover {
+  transform: scale(1.2);
+}
+
+.pokeball-display p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0f224a;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes flash {
+  0% { box-shadow: 0 0 5px #ffde00; }
+  50% { box-shadow: 0 0 20px #ffde00; }
+  100% { box-shadow: 0 0 5px #ffde00; }
+}
